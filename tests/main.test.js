@@ -4,7 +4,7 @@ import lyricsSearcher from "../dist/index";
 
 chai.use(dirtyChai);
 
-describe('lyrics-searcher("blank space", "taylor swift")', () => {
+describe('lyricsSearcher("blank space", "taylor swift")', () => {
   it("should return a non-empty string", (done) => {
     lyricsSearcher("blank space", "taylor swift")
       .then((resp) => {

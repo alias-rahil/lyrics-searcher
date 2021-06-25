@@ -2,7 +2,7 @@
 
 <p>
   <a href="https://www.npmjs.com/package/lyrics-searcher" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/lyrics-searcher.svg">
+    <img alt="Version" src="https://img.shields.io/npm/v/lyrics-searcher.svg" />
   </a>
   <a href="https://github.com/alias-rahil/lyrics-searcher#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
@@ -66,6 +66,22 @@ npm install lyrics-searcher -g
 ```sh
 lyrics-searcher "prateek kuhad" "cold mess"
 ```
+
+# Screenshot
+
+<p align="center">
+  <img align="center" src="https://raw.githubusercontent.com/alias-rahil/lyrics-searcher/main/screenshots/all-i-want-kodaline.png" alt="all-i-want-kodaline.png" />
+</p>
+
+# API
+
+For CLI usage, see the help option:
+
+```sh
+npx lyrics-searcher --help
+```
+
+For programmatic usage, use the default exported module. It takes two arguments. Artist name and Song name. It returns a promise which resolves into a string containing the lyrics if found, otherwise it will throw an exception (with an error message). 
 
 ## Author
 

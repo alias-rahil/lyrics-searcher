@@ -1,6 +1,9 @@
 <h1 align="center">Welcome to lyrics-searcher 👋</h1>
+
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://www.npmjs.com/package/lyrics-searcher" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/lyrics-searcher.svg">
+  </a>
   <a href="https://github.com/alias-rahil/lyrics-searcher#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -12,14 +15,56 @@
   </a>
 </p>
 
-> npm package template
+> A Simple Lyrics Finder That Just Works
 
-### 🏠 [Homepage](https://alias-rahil.github.io/lyrics-searcher)
+> It scrapes the lyrics from [Google](https://www.google.com/) so no seperate API key is needed.
 
-## Usage
+## Programmatic usage:
+
+### Installation
 
 ```sh
-npx lyrics-searcher "Hello, world!" "Goodbye, world!"
+npm install --save lyrics-searcher
+```
+
+### Usage
+
+```js
+import lyricsSearcher from "lyrics-searcher";
+
+(async(artist, title) => {
+    try {
+        const lyrics = await lyricsSearcher(artist, title);
+
+        console.log(lyrics);
+    } catch (error) {
+        console.error(error.message);
+    }
+})("poets of fall", "carnival of rust");
+```
+
+## Command line usage:
+
+### Using without installation
+
+```sh
+npx lyrics-searcher "a r rahman" "kun faya kun"
+```
+
+> Note: Use this method only if you plan to use lyrics-searcher for one time, installing lyrics-searcher globally (see-below) is recommended for multiple time usages.
+
+### Installation
+
+```sh
+npm install lyrics-searcher -g
+```
+
+> Note for Linux MacOS users: **DO NOT** use sudo to install global packages! The correct way is to tell npm where to install its global packages: `npm config set prefix ~/.local`. Make sure `~/.local/bin` is added to `PATH`.
+
+### Usage after installation
+
+```sh
+lyrics-searcher "prateek kuhad" "cold mess"
 ```
 
 ## Author
@@ -28,6 +73,7 @@ npx lyrics-searcher "Hello, world!" "Goodbye, world!"
 
 * Website: https://alias-rahil.github.io/
 * Github: [@alias-rahil](https://github.com/alias-rahil)
+* Email: rahil.kabani.4@gmail.com
 
 ## 🤝 Contributing
 
@@ -36,6 +82,10 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
+
+## Lyrics-Searcher
+
+🏠 [Homepage](https://alias-rahil.github.io/lyrics-searcher)
 
 ## 📝 License
 

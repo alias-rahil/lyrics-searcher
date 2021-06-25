@@ -1,0 +1,73 @@
+{
+    "name": "lyrics-searcher",
+    "version": "1.0.0",
+    "description": "A Simple Lyrics Finder That Just Works",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "bin": "bin/index.js",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "lint": "eslint src tests bin --fix",
+        "setup-hooks": "husky install",
+        "prepare": "npm run build && npm run setup-hooks",
+        "test": "mocha --experimental-specifier-resolution=node --no-warnings tests/**/*.test.js",
+        "docs": "typedoc src/index.ts",
+        "cli": "bin/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alias-rahil/lyrics-searcher.git"
+    },
+    "author": {
+        "email": "rahil.kabani.4@gmail.com",
+        "name": "Rahil Kabani",
+        "url": "https://alias-rahil.github.io/"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/alias-rahil/lyrics-searcher/issues"
+    },
+    "keywords": [
+        "song",
+        "lyrics",
+        "rapidapi",
+        "azlyrics",
+        "findlyrics",
+        "google",
+        "genius",
+        "musixmatch",
+        "scrape",
+        "api",
+        "lyrics-searcher"
+    ],
+    "homepage": "https://alias-rahil.github.io/lyrics-searcher",
+    "files": [
+        "dist/",
+        "bin/"
+    ],
+    "devDependencies": {
+        "@types/html-to-text": "^8.0.0",
+        "@types/mime-types": "^2.1.0",
+        "@types/node": "^15.12.4",
+        "@typescript-eslint/eslint-plugin": "^4.17.0",
+        "chai": "^4.3.3",
+        "dirty-chai": "^2.0.1",
+        "eslint": "^7.21.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-tsdoc": "^0.2.14",
+        "husky": "^6.0.0",
+        "mocha": "^8.4.0",
+        "typedoc": "^0.20.36",
+        "typescript": "^4.2.3"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "commander": "^7.2.0",
+        "html-to-text": "^8.0.0",
+        "iconv-lite": "^0.6.3",
+        "mime-types": "^2.1.31"
+    }
+}

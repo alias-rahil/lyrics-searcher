@@ -7,7 +7,7 @@ import pkg from "../package";
 const { version, description, name } = pkg;
 
 program
-  .name(name)
+  .name(`npx ${name}`)
   .version(version)
   .arguments("<artist> <song>")
   .description(description, {

@@ -67,13 +67,13 @@ npm install lyrics-searcher -g
 lyrics-searcher "prateek kuhad" "cold mess"
 ```
 
-# Screenshot
+## Screenshot
 
 <p align="center">
   <img align="center" src="https://raw.githubusercontent.com/alias-rahil/lyrics-searcher/main/screenshots/all-i-want-kodaline.png" alt="all-i-want-kodaline.png" />
 </p>
 
-# API
+## API
 
 For CLI usage, see the help option:
 

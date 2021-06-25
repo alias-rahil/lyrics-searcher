@@ -59,7 +59,7 @@ npx lyrics-searcher "a r rahman" "kun faya kun"
 npm install lyrics-searcher -g
 ```
 
-> Note for Linux MacOS users: **DO NOT** use sudo to install global packages! The correct way is to tell npm where to install its global packages: `npm config set prefix ~/.local`. Make sure `~/.local/bin` is added to `PATH`.
+> Note for Linux & MacOS users: **DO NOT** use sudo to install global packages! The correct way is to tell npm where to install its global packages: `npm config set prefix ~/.local`. Make sure `~/.local/bin` is added to `PATH`.
 
 ### Usage after installation
 

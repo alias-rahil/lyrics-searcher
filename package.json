@@ -1,6 +1,6 @@
 {
     "name": "lyrics-searcher",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "A Simple Lyrics Finder That Just Works",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -33,13 +33,14 @@
         "lyrics",
         "rapidapi",
         "azlyrics",
-        "findlyrics",
-        "google",
         "genius",
         "musixmatch",
-        "scrape",
-        "api",
-        "lyrics-searcher"
+        "scrape-google",
+        "lyrics-searcher",
+        "typescript",
+        "javascript",
+        "cli",
+        "lyrics-finder"
     ],
     "homepage": "https://alias-rahil.github.io/lyrics-searcher",
     "files": [

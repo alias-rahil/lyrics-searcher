@@ -1,6 +1,6 @@
 {
     "name": "lyrics-searcher",
-    "version": "1.0.7",
+    "version": "1.0.9",
     "description": "A Simple Lyrics Finder That Just Works",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -35,7 +35,8 @@
         "azlyrics",
         "genius",
         "musixmatch",
-        "scrape-google",
+        "scrape",
+        "google",
         "lyrics-searcher",
         "typescript",
         "javascript",

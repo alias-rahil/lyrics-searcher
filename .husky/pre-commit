@@ -1,0 +1,10 @@
+#!/bin/sh
+. $(dirname $0)/_/husky.sh
+set -e
+difffiles=$(git diff --name-only --staged --diff-filter=d)
+echo $difffiles | xargs git diff --exit-code package.json package-lock.json
+npm run build
+npm run test
+npm run lint
+npm version patch --git-tag-version false
+echo $difffiles | xargs git add package.json package-lock.json

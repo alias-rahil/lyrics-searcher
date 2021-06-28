@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "eslint-config-airbnb-typescript/base",
+    "plugin:@typescript-eslint/eslint-plugin/recommended",
+    "plugin:@typescript-eslint/eslint-plugin/recommended-requiring-type-checking",
+    "eslint-config-prettier"
+  ],
+  "rules": {
+    "tsdoc/syntax": "error",
+    "prettier/prettier": [
+      "error"
+    ]
+  },
+  "plugins": [
+    "eslint-plugin-tsdoc",
+    "eslint-plugin-prettier"
+  ],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  }
+}

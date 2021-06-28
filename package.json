@@ -1,0 +1,79 @@
+{
+    "name": "lyrics-searcher",
+    "version": "1.0.58",
+    "description": "A Simple Lyrics Finder That Just Works",
+    "main": "dist/src/lib/index.js",
+    "types": "types/src/lib/index.d.ts",
+    "bin": "dist/src/bin/index.js",
+    "scripts": {
+        "lint": "eslint . --fix --max-warnings 0 --ext .ts",
+        "test": "mocha --timeout 6000 -r ts-node/register tests/main.test.ts",
+        "cli": "ts-node src/bin/index.ts",
+        "build": "shx rm -rf dist types && tsc && shx sed -i \"s/\\\"files\\\":/\\\"_files_\\\":/\" dist/package.json",
+        "prepare": "npm run build && husky install",
+        "docs": "typedoc src/lib/index.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alias-rahil/lyrics-searcher.git"
+    },
+    "author": {
+        "email": "rahil.kabani.4@gmail.com",
+        "name": "Rahil Kabani",
+        "url": "https://alias-rahil.github.io"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/alias-rahil/lyrics-searcher/issues"
+    },
+    "keywords": [
+        "song",
+        "lyrics",
+        "rapidapi",
+        "azlyrics",
+        "genius",
+        "musixmatch",
+        "scrape",
+        "google",
+        "lyrics-searcher",
+        "typescript",
+        "javascript",
+        "cli",
+        "lyrics-finder"
+    ],
+    "homepage": "https://alias-rahil.github.io/lyrics-searcher",
+    "files": [
+        "dist/src",
+        "types/src/lib",
+        "dist/package.json"
+    ],
+    "devDependencies": {
+        "@types/dirty-chai": "^2.0.2",
+        "@types/html-to-text": "^8.0.0",
+        "@types/iconv": "^3.0.0",
+        "@types/mocha": "^8.2.2",
+        "@types/shelljs": "^0.8.9",
+        "@typescript-eslint/eslint-plugin": "^4.17.0",
+        "chai": "^4.3.3",
+        "dirty-chai": "^2.0.1",
+        "eslint": "^7.29.0",
+        "eslint-config-airbnb-typescript": "^12.3.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-tsdoc": "^0.2.14",
+        "husky": "^7.0.1",
+        "mocha": "^8.4.0",
+        "shelljs": "^0.8.4",
+        "shx": "^0.3.3",
+        "ts-node": "^7.0.1",
+        "typedoc": "^0.20.36",
+        "typescript": "^4.2.3"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "commander": "^7.2.0",
+        "html-to-text": "^8.0.0",
+        "iconv": "^3.0.0",
+        "joi": "^17.4.0"
+    }
+}

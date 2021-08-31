@@ -1,0 +1,200 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>lyrics-searcher</title>
+	<meta name="description" content="Documentation for lyrics-searcher">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">lyrics-searcher</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>lyrics-searcher</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 align="center">Welcome to lyrics-searcher 👋</h1>
+				<p>
+					<a href="https://www.npmjs.com/package/lyrics-searcher" target="_blank">
+						<img alt="Version" src="https://img.shields.io/npm/v/lyrics-searcher.svg" />
+					</a>
+					<a href="https://github.com/alias-rahil/lyrics-searcher#readme" target="_blank">
+						<img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+					</a>
+					<a href="https://github.com/alias-rahil/lyrics-searcher/graphs/commit-activity" target="_blank">
+						<img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+					</a>
+					<a href="https://github.com/alias-rahil/lyrics-searcher/blob/main/LICENSE" target="_blank">
+						<img alt="License: MIT" src="https://img.shields.io/github/license/alias-rahil/lyrics-searcher" />
+					</a>
+				</p>
+				<blockquote>
+					<p>A Simple Lyrics Finder That Just Works</p>
+				</blockquote>
+				<a href="#programmatic-usage" id="programmatic-usage" style="color: inherit; text-decoration: none;">
+					<h2>Programmatic usage:</h2>
+				</a>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h3>Installation</h3>
+				</a>
+				<pre><code class="language-sh"><span style="color: #000000">npm install --save lyrics-searcher</span>
+</code></pre>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h3>Usage</h3>
+				</a>
+				<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">lyricsSearcher</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;lyrics-searcher&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #795E26">lyricsSearcher</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;poets of fall&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;carnival of rust&quot;</span><span style="color: #000000">)</span>
+<span style="color: #000000">  .</span><span style="color: #795E26">then</span><span style="color: #000000">((</span><span style="color: #001080">lyrics</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">lyrics</span><span style="color: #000000">);</span>
+<span style="color: #000000">  })</span>
+<span style="color: #000000">  .</span><span style="color: #795E26">catch</span><span style="color: #000000">((</span><span style="color: #001080">error</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">error</span><span style="color: #000000">(</span><span style="color: #001080">error</span><span style="color: #000000">);</span>
+<span style="color: #000000">  });</span>
+</code></pre>
+				<a href="#command-line-usage" id="command-line-usage" style="color: inherit; text-decoration: none;">
+					<h2>Command line usage:</h2>
+				</a>
+				<a href="#using-without-installation" id="using-without-installation" style="color: inherit; text-decoration: none;">
+					<h3>Using without installation</h3>
+				</a>
+				<pre><code class="language-sh"><span style="color: #000000">npx lyrics-searcher </span><span style="color: #A31515">&quot;a r rahman&quot;</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;kun faya kun&quot;</span>
+</code></pre>
+				<blockquote>
+					<p>Note: Use this method only if you plan to use lyrics-searcher for one time, installing lyrics-searcher globally (see-below) is recommended for multiple time usages.</p>
+				</blockquote>
+				<a href="#installation-1" id="installation-1" style="color: inherit; text-decoration: none;">
+					<h3>Installation</h3>
+				</a>
+				<pre><code class="language-sh"><span style="color: #000000">npm install lyrics-searcher -g</span>
+</code></pre>
+				<blockquote>
+					<p>Note for Linux &amp; MacOS users: <strong>DO NOT</strong> use sudo to install global packages! The correct way is to tell npm where to install its global packages: <code>npm config set prefix ~/.local</code>. Make sure <code>~/.local/bin</code> is added to <code>PATH</code>.</p>
+				</blockquote>
+				<a href="#usage-after-installation" id="usage-after-installation" style="color: inherit; text-decoration: none;">
+					<h3>Usage after installation</h3>
+				</a>
+				<pre><code class="language-sh"><span style="color: #000000">lyrics-searcher </span><span style="color: #A31515">&quot;prateek kuhad&quot;</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;cold mess&quot;</span>
+</code></pre>
+				<a href="#screenshot" id="screenshot" style="color: inherit; text-decoration: none;">
+					<h2>Screenshot</h2>
+				</a>
+				<p align="center">
+					<img align="center" src="https://raw.githubusercontent.com/alias-rahil/lyrics-searcher/main/screenshots/all-i-want-kodaline.png" alt="all-i-want-kodaline.png" />
+				</p>
+				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
+					<h2>API</h2>
+				</a>
+				<p>For CLI usage, see the help option:</p>
+				<pre><code class="language-sh"><span style="color: #000000">npx lyrics-searcher --help</span>
+</code></pre>
+				<p>For programmatic usage, use the default exported module. It takes two arguments. Artist name and Song name. It returns a promise which resolves into a string containing the lyrics if found, otherwise it will throw an exception (with an error message).</p>
+				<a href="#author" id="author" style="color: inherit; text-decoration: none;">
+					<h2>Author</h2>
+				</a>
+				<p>👤 <strong>Rahil Kabani</strong></p>
+				<ul>
+					<li>Website: <a href="https://alias-rahil.github.io">https://alias-rahil.github.io</a></li>
+					<li>Github: <a href="https://github.com/alias-rahil">@alias-rahil</a></li>
+					<li>Email: <a href="mailto:rahil.kabani.4@gmail.com">rahil.kabani.4@gmail.com</a></li>
+				</ul>
+				<a href="#🤝-contributing" id="🤝-contributing" style="color: inherit; text-decoration: none;">
+					<h2>🤝 Contributing</h2>
+				</a>
+				<p>Contributions, issues and feature requests are welcome!<br />Feel free to check <a href="https://github.com/alias-rahil/lyrics-searcher/issues">issues page</a>. You can also take a look at the <a href="https://github.com/alias-rahil/lyrics-searcher/blob/main/.github/CONTRIBUTING.md">contributing guide</a>.</p>
+				<a href="#show-your-support" id="show-your-support" style="color: inherit; text-decoration: none;">
+					<h2>Show your support</h2>
+				</a>
+				<p>Give a ⭐️ if this project helped you!</p>
+				<a href="#lyrics-searcher" id="lyrics-searcher" style="color: inherit; text-decoration: none;">
+					<h2>Lyrics-searcher</h2>
+				</a>
+				<ul>
+					<li>🏠 <a href="https://alias-rahil.github.io/lyrics-searcher">Homepage</a></li>
+					<li>📄 <a href="https://github.com/alias-rahil/lyrics-searcher#readme">Readme</a></li>
+					<li>📦 <a href="https://www.npmjs.com/package/lyrics-searcher">Package</a></li>
+				</ul>
+				<a href="#📝-license" id="📝-license" style="color: inherit; text-decoration: none;">
+					<h2>📝 License</h2>
+				</a>
+				<p>Copyright © 2021 <a href="https://github.com/alias-rahil">Rahil Kabani</a>.<br />
+				This project is <a href="https://github.com/alias-rahil/lyrics-searcher/blob/main/LICENSE">MIT</a> licensed.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-function">
+						<a href="modules.html#export_" class="tsd-kind-icon">export&#61;</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
